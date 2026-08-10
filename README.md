@@ -1,6 +1,6 @@
 # YanZYi.github.io
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1000&width=500&lines=A+Personal+Website+For+Zhengyi+Yan+OvO)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1000&width=500&lines=A+Personal+Website+For+Zhengyi+Yan+%5Ev%5E)](https://git.io/typing-svg)
 
 #### 📫 How to reach me:
 
