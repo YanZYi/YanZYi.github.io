@@ -63,7 +63,7 @@ function renderHome(posts) {
     contentEl.innerHTML = `
         <section class="card hero-card">
             <h1>欢迎来到 Yan Home</h1>
-            <p>前端开发 · UI/UX 设计 · 创意技术 —— 这里记录我的学习笔记与技术思考。</p>
+            <p>全栈开发 · 创意技术 · 算法设计 —— 这里记录我的学习笔记与技术思考。</p>
             <div class="hero-stats">
                 <div class="stat"><div class="num">${posts.length}</div><div class="label">篇文章</div></div>
                 <div class="stat"><div class="num">${new Set(posts.flatMap(p => p.tags || [])).size}</div><div class="label">个标签</div></div>
@@ -138,17 +138,17 @@ function renderAbout() {
     contentEl.innerHTML = `
         <section class="card about-text">
             <h2 class="section-title">关于我</h2>
-            <p>你好！我是 <strong>严正易</strong>，一名充满激情的前端开发爱好者，专注于创建令人惊叹的用户体验和响应式网站。我擅长将复杂的设计转化为高效、可访问的代码。</p>
+            <p>你好！我是 <strong>严正易</strong>，一名充满激情的全栈开发爱好者，专注于创建Web应用并提供AI技术解决方案。我擅长将复杂的设计转化为高效、可访问的代码，把复杂的需求转化为简洁、高效的算法。</p>
             <h3>技能栈</h3>
             <div class="skill-mini">
-                <span>HTML5 / CSS3</span><span>JavaScript (ES6+)</span><span>React</span>
-                <span>Vue.js</span><span>响应式设计</span><span>UI/UX 设计</span><span>性能优化</span>
+                <span>HTML5 / CSS3</span><span>JavaScript (ES6+)</span><span>C/C++</span>
+                <span>Python</span><span>Vibe Coding</span><span>算法设计</span><span>性能优化</span>
             </div>
             <h3>关于这个博客</h3>
             <p>本站基于原生 HTML/CSS/JS 构建，部署在 GitHub Pages。文章以 Markdown 文件形式存放在 <code>posts/</code> 目录，由前端动态加载并渲染，支持 GFM（表格、任务列表、代码高亮等）。</p>
             <h3>联系方式</h3>
             <p><i class="fas fa-map-marker-alt" style="color:var(--accent-color)"></i> 中国 · 无锡（新吴区）</p>
-            <p><i class="fas fa-envelope" style="color:var(--accent-color)"></i> yanzymail@qq.com</p>
+            <p><i class="fas fa-envelope" style="color:var(--accent-color)"></i> yanzhyii@outlook.com</p>
         </section>
     `;
 }
