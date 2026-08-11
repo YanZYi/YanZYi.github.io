@@ -142,7 +142,7 @@ function renderAbout() {
             <h3>技能栈</h3>
             <div class="skill-mini">
                 <span>HTML5 / CSS3</span><span>JavaScript (ES6+)</span><span>C/C++</span>
-                <span>Python</span><span>Vibe Coding</span><span>算法设计</span><span>性能优化</span>
+                <span>Python</span><span>Agent Engineer</span><span>算法设计</span><span>性能优化</span>
             </div>
             <h3>关于这个博客</h3>
             <p>本站基于原生 HTML/CSS/JS 构建，部署在 GitHub Pages。文章以 Markdown 文件形式存放在 <code>posts/</code> 目录，由前端动态加载并渲染，支持 GFM（表格、任务列表、代码高亮等）。</p>
