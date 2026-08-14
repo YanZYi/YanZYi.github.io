@@ -1,0 +1,47 @@
+{
+  "name": "yan-home",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Yan Home — a modern, cyberpunk-styled personal blog built with Next.js.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["nextjs", "blog", "personal-site", "cyberpunk", "markdown"],
+  "author": "Zhengyi Yan <yanzhyii@outlook.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@tsparticles/react": "^4.3.2",
+    "@tsparticles/slim": "^4.3.2",
+    "clsx": "^2.1.1",
+    "gray-matter": "^4.0.3",
+    "katex": "^0.18.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^10.0.1",
+    "rehype-highlight": "^7.0.2",
+    "rehype-katex": "^7.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
+    "tailwindcss": "^3.4.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.21.0",
+    "@typescript-eslint/parser": "^8.21.0",
+    "autoprefixer": "^10.4.16",
+    "eslint-config-next": "^16.3.1",
+    "next": "^16.3.1",
+    "postcss": "^8.4.32",
+    "postcss-import": "^16.1.1",
+    "tailwind-merge": "^2.2.1",
+    "typescript": "^5.7.3"
+  }
+}
