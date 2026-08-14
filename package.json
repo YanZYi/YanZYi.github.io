@@ -1,0 +1,40 @@
+{
+  "name": "agent_905553b9-f36d-42bb-a091-9d00b9c929ae",
+  "version": "1.0.0",
+  "description": "[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1000&width=500&lines=A+Personal+Website+For+Zhengyi+Yan+%5Ev%5E)](https://git.io/typing-svg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://x-access-token:kgh2.Kie5im7MIy3Ybe%2Fn1n6iQQ%3D%3D%3AC2FT1BzG9%2Fe4L2UNMx+cnQ%3D%3D%3AAhS8nu1mtjED70gsvgEWuMhpqbNdABGN8OniW%2FDttm6SyQbL6BAhPZBgcSq3wfOAaR49DxGnhCSF1HdnlMwfcQhi8CefYS+NC6N3bOi9T332y1m4z4Sps7E3VJrHRb6AgE5PrPESdd5+4f4W%2FhWsEpg2hJSwIiToSuMsrJqaCRlRpkLY6LMUIVnBtZ1box0mRoX3o4WLXzGZgsdr9fx1sisbpC99mhAKQco8xH9sfE1U07Fyhku4bemv6vm36cezJ4dzRwpUN02TViGbu3EUfO7QA%2FGRNfARUH7UZ2Wo235zzTh%2FSHtZ6RM6k1F3Os7PmgLEvaaYgBaXEzQ+GBaIfE03fIw0JzwkIz4Zb8lU6u2blKfZOfbXuozAy80LHptvQ4m8dGtGv87jmq9iQWdmivG5493hNCRUnVtOBthIEnA48jJEQqJd0WMoGa2HLd4B4JUlTmoeU1kGP9vwRQSuDfF2kkOGuXrSwpvIZTRQG46WFu6mkFJHuevtSNIAIsMVi5H%2FNwD5ovez0X3Sxn3x7SUMJdMoMabCADQSotzy9QyQT0ddSDW1p3r%2FG8oRuFepQk2fYdaO0MG0I1E%2FYItqLW1U+NiaVzsuMXi4rFGWIWuqt6uic3quELkJJhxIT1G+FjOAbUZ09xFEYMAolaez3CYvOUU6M5GaIWygTyEwq5Gvppe62weY%2FxPzkb07m2MUxMnQZFuFoeOh1x%2FDE5Q3Kfqpqf15dK5FNlQTEhB87nXAHBRE58ur@github.com/YanZYi/YanZYi.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YanZYi/YanZYi.github.io/issues"
+  },
+  "homepage": "https://github.com/YanZYi/YanZYi.github.io#readme",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "autoprefixer": "^10.5.4",
+    "gray-matter": "^4.0.3",
+    "katex": "^0.18.4",
+    "next": "^16.3.1",
+    "postcss": "^8.5.26",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-markdown": "^10.1.0",
+    "rehype-highlight": "^7.0.2",
+    "rehype-katex": "^7.0.1",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2"
+  }
+}
