@@ -1,0 +1,286 @@
+@import "tailwindcss";
+
+/* ===== 主题变量（运行时由 ThemeProvider 修改，实现动态主题） ===== */
+:root {
+  --theme-primary: #6a11cb;
+  --theme-secondary: #2575fc;
+  --theme-accent: #ff3e78;
+  --content-opacity: 0.72;
+  --card-border: rgba(255, 255, 255, 0.09);
+}
+
+/* inline：让 bg-primary / text-accent 等工具类直接引用运行时变量 */
+@theme inline {
+  --color-primary: var(--theme-primary);
+  --color-secondary: var(--theme-secondary);
+  --color-accent: var(--theme-accent);
+}
+
+@theme {
+  --font-sans: "Segoe UI", system-ui, -apple-system, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-mono: "Fira Code", "JetBrains Mono", "Consolas", "Courier New",
+    monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#070714] text-[#eef0ff];
+  font-family: var(--font-sans);
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ===== 滚动条 ===== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0d1f;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--theme-primary),
+    var(--theme-accent)
+  );
+  border-radius: 5px;
+}
+
+/* ===== 组件级样式 ===== */
+@layer components {
+  /* 毛玻璃卡片 */
+  .glass-card {
+    border-radius: 1.25rem;
+    border: 1px solid var(--card-border);
+    background: rgba(18, 20, 46, var(--content-opacity));
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+  }
+
+  /* 渐变文字 */
+  .gradient-text {
+    background-image: linear-gradient(
+      120deg,
+      var(--theme-primary),
+      var(--theme-secondary),
+      var(--theme-accent)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* 霓虹发光文字 */
+  .neon-text {
+    text-shadow: 0 0 8px color-mix(in srgb, var(--theme-accent) 60%, transparent),
+      0 0 26px color-mix(in srgb, var(--theme-accent) 30%, transparent);
+  }
+
+  /* 赛博网格背景叠加层 */
+  .cyber-grid {
+    background-image: linear-gradient(
+        color-mix(in srgb, var(--theme-primary) 14%, transparent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--theme-primary) 14%, transparent) 1px,
+        transparent 1px
+      );
+    background-size: 44px 44px;
+    mask-image: radial-gradient(
+      ellipse 90% 80% at 50% 0%,
+      black 40%,
+      transparent 100%
+    );
+    -webkit-mask-image: radial-gradient(
+      ellipse 90% 80% at 50% 0%,
+      black 40%,
+      transparent 100%
+    );
+  }
+
+  /* 霓虹按钮 */
+  .neon-btn {
+    @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold text-white transition-all duration-200;
+    background: linear-gradient(
+      135deg,
+      var(--theme-primary),
+      var(--theme-secondary)
+    );
+    box-shadow: 0 0 18px color-mix(in srgb, var(--theme-primary) 50%, transparent);
+  }
+  .neon-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 28px color-mix(in srgb, var(--theme-accent) 55%, transparent);
+  }
+  .neon-btn:active {
+    transform: translateY(0);
+  }
+
+  /* 侧边栏导航链接 */
+  .side-link {
+    @apply flex items-center gap-3 rounded-xl px-3.5 py-2.5 font-medium transition-all duration-200;
+    color: rgba(240, 240, 255, 0.68);
+  }
+  .side-link:hover {
+    @apply text-[#f0f0ff];
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .side-link.active {
+    @apply text-white;
+    background: linear-gradient(
+      135deg,
+      var(--theme-primary),
+      var(--theme-secondary)
+    );
+    box-shadow: 0 5px 18px color-mix(in srgb, var(--theme-secondary) 45%, transparent);
+  }
+  .side-link.active i {
+    color: #fff;
+  }
+
+  /* 区块标题 */
+  .section-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    position: relative;
+  }
+  .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(45deg, var(--theme-primary), var(--theme-accent));
+  }
+}
+
+/* ===== Markdown 排版 ===== */
+.md-body {
+  @apply text-[0.98rem] leading-[1.85] text-[#e8e8f5];
+  word-break: break-word;
+}
+.md-body h1,
+.md-body h2,
+.md-body h3,
+.md-body h4,
+.md-body h5,
+.md-body h6 {
+  @apply mt-8 mb-3 font-bold leading-snug;
+}
+.md-body h1 {
+  @apply pb-2 text-[1.7rem];
+  border-bottom: 1px solid var(--card-border);
+}
+.md-body h2 {
+  @apply pb-2 text-[1.4rem];
+  border-bottom: 1px solid var(--card-border);
+}
+.md-body h3 {
+  @apply text-[1.18rem];
+}
+.md-body h4 {
+  @apply text-[1.02rem];
+}
+.md-body p {
+  @apply my-3;
+}
+.md-body a {
+  color: var(--theme-secondary);
+  text-decoration: none;
+}
+.md-body a:hover {
+  color: var(--theme-accent);
+  text-decoration: underline;
+}
+.md-body ul {
+  @apply my-3 list-disc space-y-1 pl-6;
+}
+.md-body ol {
+  @apply my-3 list-decimal space-y-1 pl-6;
+}
+.md-body li {
+  @apply my-0.5;
+}
+.md-body li::marker {
+  color: var(--theme-primary);
+}
+.md-body blockquote {
+  @apply my-4 rounded-r-lg border-l-4 py-1 pl-4 pr-2;
+  border-color: var(--theme-primary);
+  background: color-mix(in srgb, var(--theme-primary) 12%, transparent);
+  color: rgba(240, 240, 255, 0.78);
+}
+.md-body blockquote p {
+  @apply my-1;
+}
+.md-body :not(pre) > code {
+  @apply rounded-md px-1.5 py-0.5 text-[0.88em];
+  background: rgba(255, 184, 212, 0.08);
+  color: #ffb8d4;
+  font-family: var(--font-mono);
+}
+.md-body pre {
+  @apply my-4 overflow-x-auto rounded-xl border p-4;
+  background: #0b0d1f;
+  border-color: var(--card-border);
+}
+.md-body pre code {
+  @apply bg-transparent p-0 text-[0.88rem] leading-relaxed;
+  font-family: var(--font-mono);
+}
+/* 覆盖 highlight.js 主题，与代码块背景统一 */
+.md-body pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0;
+  background: transparent;
+}
+.md-body table {
+  @apply my-4 w-full border-collapse;
+}
+.md-body th,
+.md-body td {
+  @apply border px-3 py-2 text-left;
+  border-color: var(--card-border);
+}
+.md-body th {
+  background: color-mix(in srgb, var(--theme-primary) 18%, transparent);
+}
+.md-body hr {
+  @apply my-6;
+  border-color: var(--card-border);
+}
+.md-body img {
+  @apply my-4 max-w-full rounded-xl;
+}
+.md-body input[type="checkbox"] {
+  @apply mr-2;
+  accent-color: var(--theme-accent);
+}
+.md-body .katex-display {
+  @apply overflow-x-auto py-2;
+}
+
+/* 隐藏代码块的复制按钮样式（由 JS 动态添加） */
+.code-copy-btn {
+  @apply absolute right-2 top-2 rounded-md px-2 py-1 text-xs transition-all duration-200;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(240, 240, 255, 0.6);
+}
+.code-copy-btn:hover {
+  @apply text-white;
+  background: color-mix(in srgb, var(--theme-accent) 55%, transparent);
+}
